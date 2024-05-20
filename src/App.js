@@ -16,12 +16,12 @@ const App = () => {
       <div className="chart-container">
         <BarChart />
         <LineChart />
+        <BubbleChart />
+        <ScatterChart />
         <PieChart />
         <RadarChart />
         <DoughnutChart />
         <PolarAreaChart />
-        <BubbleChart />
-        <ScatterChart />
       </div>
     </div>
   );
