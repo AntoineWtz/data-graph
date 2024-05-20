@@ -4,11 +4,11 @@ import 'chartjs-adapter-date-fns';
 
 Chart.register(...registerables);
 
-const ChartComponent = ({ type, data }) => {
-    const chartRef = useRef(null);
-    const chartInstanceRef = useRef(null);
+const ChartComponent = ({ type, data, title }) => {
+    const chartRef = React.useRef(null);
+    const chartInstanceRef = React.useRef(null);
 
-    useEffect(() => {
+    React.useEffect(() => {
         const ctx = chartRef.current.getContext('2d');
 
         if (chartInstanceRef.current) {
@@ -28,8 +28,13 @@ const ChartComponent = ({ type, data }) => {
     }, [type, data]);
 
     return (
-        <div className="chart-wrapper">
-            <canvas ref={chartRef}></canvas>
+        <div className="chart-card"> {/* Utilisation d'une classe CSS pour styliser la carte */}
+            <div className="chart-card-content">
+                <h2>{title}</h2> {/* Affichage du titre du graphique */}
+                <div className="chart-wrapper">
+                    <canvas ref={chartRef}></canvas>
+                </div>
+            </div>
         </div>
     );
 };

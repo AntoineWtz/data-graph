@@ -5,11 +5,34 @@
 
 .chart-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   margin-top: 30px;
 }
 
 .chart-wrapper {
   width: 400px;
   margin: 0 auto;
+}
+
+.chart-card {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chart-card-content {
+  padding: 20px;
+}
+
+.chart-card-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.chart-wrapper {
+  margin-top: 10px;
 }
