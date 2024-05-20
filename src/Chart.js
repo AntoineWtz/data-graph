@@ -1,18 +1,30 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Chart, registerables } from 'chart.js';
 import 'chartjs-adapter-date-fns';
 
 Chart.register(...registerables);
 
 const ChartComponent = ({ type, data }) => {
-    const chartRef = React.useRef(null);
+    const chartRef = useRef(null);
+    const chartInstanceRef = useRef(null);
 
-    React.useEffect(() => {
+    useEffect(() => {
         const ctx = chartRef.current.getContext('2d');
-        new Chart(ctx, {
+
+        if (chartInstanceRef.current) {
+            chartInstanceRef.current.destroy();
+        }
+
+        chartInstanceRef.current = new Chart(ctx, {
             type: type,
             data: data,
         });
+
+        return () => {
+            if (chartInstanceRef.current) {
+                chartInstanceRef.current.destroy();
+            }
+        };
     }, [type, data]);
 
     return (
