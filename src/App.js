@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
+import BarChart from './BarChart';
+import LineChart from './LineChart';
+import PieChart from './PieChart';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <h1>Graphs and diagrams examples</h1>
+      <div className="chart-container">
+        <BarChart />
+        <LineChart />
+        <PieChart />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
