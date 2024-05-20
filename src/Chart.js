@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import { Chart, registerables } from 'chart.js';
 import 'chartjs-adapter-date-fns';
 
@@ -28,9 +28,9 @@ const ChartComponent = ({ type, data, title }) => {
     }, [type, data]);
 
     return (
-        <div className="chart-card"> {/* Utilisation d'une classe CSS pour styliser la carte */}
+        <div className="chart-card">
             <div className="chart-card-content">
-                <h2>{title}</h2> {/* Affichage du titre du graphique */}
+                <h2>{title}</h2>
                 <div className="chart-wrapper">
                     <canvas ref={chartRef}></canvas>
                 </div>
