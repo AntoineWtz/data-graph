@@ -6,7 +6,7 @@ const PieChart = () => {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
             label: 'My Dataset',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [12, 7, 3, 5, 2, 8],
             backgroundColor: [
                 'rgb(255, 99, 132)',
                 'rgb(54, 162, 235)',
