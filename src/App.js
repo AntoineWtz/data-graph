@@ -1,8 +1,12 @@
 import React from 'react';
-import BarChart from './BarChart';
-import LineChart from './LineChart';
-import PieChart from './PieChart';
-import RadarChart from './RadarChart';
+import BarChart from './component/BarChart';
+import LineChart from './component/LineChart';
+import PieChart from './component/PieChart';
+import RadarChart from './component/RadarChart';
+import DoughnutChart from './component/DoughnutChart';
+import PolarAreaChart from './component/PolarAreaChart';
+import BubbleChart from './component/BubbleChart';
+import ScatterChart from './component/ScatterChart';
 import './App.css';
 
 const App = () => {
@@ -14,6 +18,10 @@ const App = () => {
         <LineChart />
         <PieChart />
         <RadarChart />
+        <DoughnutChart />
+        <PolarAreaChart />
+        <BubbleChart />
+        <ScatterChart />
       </div>
     </div>
   );
