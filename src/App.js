@@ -13,6 +13,7 @@ const App = () => {
   return (
     <div className="app-container">
       <h1>Graphs and diagrams examples</h1>
+      <p>using Chart.js</p>
       <div className="chart-container">
         <BarChart />
         <LineChart />
